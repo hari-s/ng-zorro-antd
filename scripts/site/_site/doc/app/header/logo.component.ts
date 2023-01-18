@@ -5,8 +5,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <a href="/" id="logo">
-      <img width="32" height="28.27" alt="logo" src="./assets/img/logo.svg" />
-      <strong>NG-ZORRO</strong>
+      <img alt="logo" width="144" src="./assets/img/logo.svg" />
     </a>
   `,
   styles: [

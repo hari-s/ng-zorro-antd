@@ -71,10 +71,10 @@
 
 // -------- Colors -----------
 // >>> Primary
-@primary-color: ~'var(--@{ant-prefix}-primary-color)';
-@primary-color-hover: ~'var(--@{ant-prefix}-primary-color-hover)';
-@primary-color-active: ~'var(--@{ant-prefix}-primary-color-active)';
-@primary-color-outline: ~'var(--@{ant-prefix}-primary-color-outline)';
+@primary-color: #E00; // ~'var(--@{ant-prefix}-primary-color)';
+@primary-color-hover:  #D40000; //~'var(--@{ant-prefix}-primary-color-hover)';
+@primary-color-active: #D40000; // ~'var(--@{ant-prefix}-primary-color-active)';
+@primary-color-outline: #D40000; // ~'var(--@{ant-prefix}-primary-color-outline)';
 
 @processing-color: @primary-color;
 
@@ -135,7 +135,7 @@
 // Popover background color
 @popover-background: @component-background;
 @popover-customize-border-color: @border-color-split;
-@font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+@font-family: 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
   'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
   'Noto Color Emoji';
 @code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
@@ -150,9 +150,9 @@
 @text-selection-bg: @primary-color;
 @font-variant-base: tabular-nums;
 @font-feature-settings-base: 'tnum';
-@font-size-base: 14px;
+@font-size-base: 16px;
 @font-size-lg: @font-size-base + 2px;
-@font-size-sm: 12px;
+@font-size-sm: 16px;
 @heading-1-size: ceil(@font-size-base * 2.71);
 @heading-2-size: ceil(@font-size-base * 2.14);
 @heading-3-size: ceil(@font-size-base * 1.71);
@@ -160,7 +160,7 @@
 @heading-5-size: ceil(@font-size-base * 1.14);
 // https://github.com/ant-design/ant-design/issues/20210
 @line-height-base: 1.5715;
-@border-radius-base: 2px;
+@border-radius-base: 0px;
 @border-radius-sm: @border-radius-base;
 
 // control border
@@ -188,9 +188,9 @@
 @margin-xss: 4px; // more small
 
 // height rules
-@height-base: 32px;
-@height-lg: 40px;
-@height-sm: 24px;
+@height-base: 42px;
+@height-lg: 50px;
+@height-sm: 32px;
 
 // The background colors for active and hover states for things like
 // list items or table cells.
@@ -226,8 +226,10 @@
 @ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
 
 // Border color
-@border-color-base: hsv(0, 0, 85%); // base border outline a component
-@border-color-split: rgba(0, 0, 0, 0.06); // split border inside a component
+// @border-color-base: hsv(0, 0, 85%); // base border outline a component
+@border-color-base: #a1a1a1;
+// @border-color-split: rgba(0, 0, 0, 0.06); // split border inside a component
+@border-color-split: @border-color-base;
 @border-color-inverse: @white;
 @border-width-base: 1px; // width of the border for a component
 @border-style-base: solid; // style of a components border
@@ -263,14 +265,17 @@
   0 9px 28px 8px rgba(0, 0, 0, 0.05);
 
 // Buttons
-@btn-font-weight: 400;
+@btn-font-weight: 300;
 @btn-border-radius-base: @border-radius-base;
 @btn-border-radius-sm: @border-radius-base;
 @btn-border-width: @border-width-base;
 @btn-border-style: @border-style-base;
-@btn-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
-@btn-primary-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
-@btn-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+// @btn-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+// @btn-primary-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+// @btn-text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+@btn-shadow: none; //0 2px 0 rgba(0, 0, 0, 0.015);
+@btn-primary-shadow: none; // 0 2px 0 rgba(0, 0, 0, 0.045);
+@btn-text-shadow: none; // 0 -1px 0 rgba(0, 0, 0, 0.12);
 
 @btn-primary-color: #fff;
 @btn-primary-bg: @primary-color;
@@ -320,7 +325,7 @@
 @btn-text-hover-bg: rgba(0, 0, 0, 0.018);
 
 // Checkbox
-@checkbox-size: 16px;
+@checkbox-size: 24px;
 @checkbox-color: @primary-color;
 @checkbox-check-color: #fff;
 @checkbox-check-bg: @checkbox-check-color;
@@ -777,7 +782,7 @@
 @badge-dot-size: 6px;
 @badge-font-size: @font-size-sm;
 @badge-font-size-sm: @font-size-sm;
-@badge-font-weight: normal;
+@badge-font-weight: 300;
 @badge-status-size: 6px;
 @badge-text-color: @component-background;
 @badge-color: @highlight-color;
